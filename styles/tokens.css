@@ -1,0 +1,58 @@
+/*
+ * Design tokens — restyled per Chat-to-Pay design spec (§3 color, §4 type).
+ *
+ * Every `--color-*` value below is pulled from Tailwind's default palette
+ * (no custom hexes): slate for surfaces/text, emerald for primary/success,
+ * amber/red/sky for status. The daisyUI theme in styles/globals.css mirrors
+ * these so semantic classes (btn-primary, badge-success) stay in sync.
+ *
+ * The semantic names on the left are kept from the Outstand original so the
+ * ported sections resolve unchanged; only their values changed.
+ */
+
+:root {
+  /* ---- Brand primary (emerald) ------------------------------------ */
+  --color-accent: #059669; /* emerald-600 */
+  --color-accent-soft: #10b981; /* emerald-500 */
+  --color-accent-muted: #34d399; /* emerald-400 */
+  --color-accent-tint: #ecfdf5; /* emerald-50 */
+
+  /* ---- Dark surfaces (page background → raised cards) -------------- */
+  --color-ink-950: #020617; /* slate-950 */
+  --color-ink-900: #0f172a; /* slate-900 */
+  --color-ink-850: #1e293b; /* slate-800 */
+  --color-ink-800: #1e293b; /* slate-800 */
+  --color-ink-700: #334155; /* slate-700 */
+  --color-ink-600: #334155; /* slate-700 */
+  --color-ink-500: #475569; /* slate-600 */
+
+  /* ---- Neutral text / borders (slate scale) ------------------------ */
+  --color-mist-600: #64748b; /* slate-500 — muted text */
+  --color-mist-500: #94a3b8; /* slate-400 */
+  --color-mist-400: #cbd5e1; /* slate-300 */
+  --color-mist-300: #e2e8f0; /* slate-200 */
+  --color-mist-200: #f1f5f9; /* slate-100 */
+  --color-mist-100: #f8fafc; /* slate-50 */
+  --color-white: #ffffff;
+
+  /* ---- Typography -------------------------------------------------- */
+  --font-heading: var(--font-inter), system-ui, sans-serif;
+  --font-body: var(--font-inter), system-ui, sans-serif;
+  --font-ui: var(--font-inter), system-ui, sans-serif;
+
+  /* ---- Layout ------------------------------------------------------ */
+  /* The centred content column measures 1140px on desktop in the template. */
+  --shell-max-width: 1140px;
+  --shell-gutter-desktop: 0px;
+  --shell-gutter-tablet: 40px;
+  --shell-gutter-phone: 20px;
+
+  /* Fixed header height, measured from the template at each breakpoint. */
+  --header-height: 115px;
+
+  /* ---- Motion ------------------------------------------------------ */
+  /* Framer's default appear-animation curve and duration. */
+  --ease-out-framer: cubic-bezier(0.44, 0, 0.56, 1);
+  --duration-appear: 0.8s;
+  --duration-hover: 0.3s;
+}
